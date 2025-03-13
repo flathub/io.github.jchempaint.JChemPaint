@@ -30,6 +30,7 @@ modules:
       - install -Dm755 jchempaint /app/bin/jchempaint
       - install -Dm755 io.github.jchempaint.JChemPaint.desktop /app/share/applications/io.github.jchempaint.JChemPaint.desktop
       - install -Dm755 io.github.jchempaint.JChemPaint.256.png /app/share/icons/hicolor/256x256/apps/io.github.jchempaint.JChemPaint.png
+      - install -Dm755 io.github.jchempaint.JChemPaint.512.png /app/share/icons/hicolor/512x512/apps/io.github.jchempaint.JChemPaint.png
       - install -Dm755 io.github.jchempaint.JChemPaint.metainfo.xml /app/share/metainfo/io.github.jchempaint.JChemPaint.metainfo.xml
       - install -Dm644 JChemPaint.jar  /app/share/org.openscience/jchempaint/JChemPaint.jar
     sources:
@@ -43,8 +44,14 @@ modules:
       - type: file
         path: jcp-log4j2.xml # disable internet lookup for configuration file
       - type: file
-        path: io.github.jchempaint.JChemPaint.desktop
+        url: https://raw.githubusercontent.com/JChemPaint/jchempaint/refs/heads/master/appstream/io.github.jchempaint.JChemPaint.desktop
+        sha256: 18717c6f9951c2193aa57ca6ec10d4d31e6935c479a3c2c34385f6d96eed8edc
       - type: file
-        path: io.github.jchempaint.JChemPaint.256.png
+        url: https://raw.githubusercontent.com/JChemPaint/jchempaint/refs/heads/master/appstream/io.github.jchempaint.JChemPaint.256.png
+        sha256: 106ab9f62f12be0f2d216ca78677006745640a4dee175137c46ac293ac698dae
       - type: file
-        path: io.github.jchempaint.JChemPaint.metainfo.xml
+        url: https://raw.githubusercontent.com/JChemPaint/jchempaint/refs/heads/master/appstream/io.github.jchempaint.JChemPaint.512.png
+        sha256: f29da2ba82a12d42e947496d1b303d409206abc809e1dcb1282b24aea9109253
+      - type: file
+        url: https://raw.githubusercontent.com/JChemPaint/jchempaint/f15f0cfc6e006986ea1a224c6ffb87d0c0275858/appstream/io.github.jchempaint.JChemPaint.metainfo.xml
+        sha256: 3c709a2e2b0caa56e4869d6088380d50b6f19f47101bc61e924af406e1cb47e1
